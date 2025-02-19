@@ -16,3 +16,25 @@ function mensagemPersonalizada(nome: string): string {
 }
 
 console.log(mensagemPersonalizada("Matheus"));
+
+// Excercio 3
+// Crie uma classe Carro com atributos marca, modelo e ano. Instancie um objeto e exiba suas informações.
+class Carro {
+    private marca: string;
+    private modelo: string;
+    private ano: number;
+
+    constructor(marca: string, modelo: string, ano: number) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+    }
+
+    apresentar(): string {
+        return `Marca: ${this.marca} - Modelo ${this.modelo} - Ano ${this.ano}`
+    } 
+}
+
+let carro: Carro = new Carro('Honda', 'Civic', 2018)
+
+console.log(carro.apresentar());
