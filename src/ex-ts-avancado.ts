@@ -45,6 +45,30 @@ const lista2 = ['a','b','c','d','e','f']
 console.log("Array invertido", inverterArray(lista1));
 console.log("Array invertido",inverterArray(lista2));
 
+// Exercício 4
+// Crie uma interface genérica chamada Repositorio<T>, que tenha um método salvar(dado: T): void e um método obterTodos(): T[].
+// Depois, crie uma implementação dessa interface para armazenar uma lista de usuários (com nome e email).
+
+interface Repositorio<T> {
+    salvar(dado: T): void;
+    obterTodos(): T[];
+}
+
+type TipoUsuario = {nome: string; email: string}
+
+class Usuario implements Repositorio<TipoUsuario> {
+    private usuarios: TipoUsuario[] = [];
+
+    salvar(dado: TipoUsuario): void {
+        this.usuarios.push(dado);
+    }
+
+    obterTodos(): TipoUsuario[] {
+        return this.usuarios;
+    }
+} 
+
+
 // Exercício 5
 // Crie um Type Alias chamado RespostaServidor, que pode ser uma string ou um boolean.
 // Depois, crie uma função chamada processarResposta que recebe um valor desse tipo e imprime uma mensagem no console dependendo do valor passado.
