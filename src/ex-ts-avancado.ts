@@ -30,3 +30,17 @@ const produto: Multiplicacao = (x, y) => x * y
 let exemplos: number[] = [produto(2,2), produto(54,2), produto(23,3), produto(7, 5)]
 
 exemplos.forEach((n, i) => console.log(`Ex-${i+1}:`, n))
+
+// Exercício 3
+// Crie uma função genérica chamada inverterArray<T>, que recebe um array de qualquer tipo e retorna um novo array com os elementos invertidos.
+// Teste a função com um array de números e um array de strings.
+
+function inverterArray<T>(array: T[]): T[] {
+    return array.reverse();  
+}
+
+const lista1 = [1,2,3,4,5,6]
+const lista2 = ['a','b','c','d','e','f']
+
+console.log("Array invertido", inverterArray(lista1));
+console.log("Array invertido",inverterArray(lista2));
