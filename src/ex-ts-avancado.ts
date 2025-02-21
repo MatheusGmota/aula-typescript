@@ -44,3 +44,15 @@ const lista2 = ['a','b','c','d','e','f']
 
 console.log("Array invertido", inverterArray(lista1));
 console.log("Array invertido",inverterArray(lista2));
+
+// Exercício 5
+// Crie um Type Alias chamado RespostaServidor, que pode ser uma string ou um boolean.
+// Depois, crie uma função chamada processarResposta que recebe um valor desse tipo e imprime uma mensagem no console dependendo do valor passado.
+
+type RespostaServidor = string | boolean;
+
+function processarResposta(respostaServidor: RespostaServidor) {
+    console.log(`Resposta do Servidor: ${respostaServidor}`);
+}
+
+processarResposta("ERRO 404")
