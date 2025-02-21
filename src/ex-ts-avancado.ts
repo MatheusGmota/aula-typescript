@@ -16,3 +16,17 @@ let meuCarro: Carro = {
 }
 
 console.log("Marca:", meuCarro.marca, "- Modelo:", meuCarro.modelo, "- Ano:", meuCarro.ano, "- Motor:", meuCarro.motor);
+
+// Exercício 2
+// Crie uma interface Multiplicacao para tipar uma função que recebe dois números e retorna o resultado da multiplicação deles.
+// Depois, implemente essa função e teste com diferentes valores.
+
+interface Multiplicacao {
+    (a: number, b: number): number;
+}
+
+const produto: Multiplicacao = (x, y) => x * y
+
+let exemplos: number[] = [produto(2,2), produto(54,2), produto(23,3), produto(7, 5)]
+
+exemplos.forEach((n, i) => console.log(`Ex-${i+1}:`, n))
